@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UDAAN Landing Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(90deg, #ffe6f0, #fefeff);
+      color: #1a1a1a;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 60px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+.logo img {
+  width: 100%;
+  max-width: 180px;   /* Adjust according to your design */
+  height: auto;
+}
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+    }
+
+    nav a.active {
+      color: #e6007e;
+      font-weight: 600;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .actions select {
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .btn-outline {
+      border: 2px solid #e6007e;
+      background: transparent;
+      color: #e6007e;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 60px;
+      gap: 30px;
+    }
+
+    .hero-text h1 {
+      font-size: 44px;
+      line-height: 1.2;
+    }
+
+    .hero-text h1 span {
+      color: #e6007e;
+    }
+
+    .hero-text p {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .btn-primary {
+      background: #f9b233;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #000;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #e6007e;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      color: #e6007e;
+      cursor: pointer;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .card img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card-content h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .card-content p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #444;
+      text-align: left;
+    }
+
+    .badge {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .entrepreneur {
+      background: #a855f7;
+    }
+
+    .success {
+      background: #22c55e;
+    }
+
+    .hiring {
+      background: #facc15;
+      color: #000;
+    }
+
+    .job {
+      background: #d1d5db;
+      color: #000;
+    }
+
+    .trust-box {
+      margin-top: 40px;
+      padding: 20px;
+      border: 2px solid #a855f7;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .trust-box span {
+      font-weight: 700;
+      color: #000;
+    }
+
+    .what-we-do {
+      position: relative;
+      text-align: center;
+      padding: 60px 20px 120px;
+      /* extra bottom padding for curve */
+      background: #fff;
+      overflow: hidden;
+    }
+
+    /* Semi-circle background */
+    .what-we-do::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150%;
+      height: 100%;
+      background: radial-gradient(circle at center top, #ffe6f0 70%, transparent 71%);
+      border-bottom-left-radius: 50% 100%;
+      border-bottom-right-radius: 50% 100%;
+      z-index: -1;
+    }
+
+    .what-we-do p.heading {
+      font-size: 16px;
+      color: #444;
+      margin: 0;
+    }
+
+    .what-we-do h2 {
+      margin: 8px 0 24px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #e6007e;
+    }
+
+    .what-we-do ul {
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 15px;
+      padding-left: 20px;
+    }
+
+    .what-we-do ul li {
+      margin-bottom: 12px;
+    }
+
+    .section {
+      background: #fff0f6;
+      /* light pink background */
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .section h2 span {
+      color: #e6007e;
+      /* pink highlight */
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+      align-items: stretch;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .right-column {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .impact-section {
+      background: linear-gradient(135deg, #e6007e, #6a00f4);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .impact-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .impact-section p {
+      font-size: 16px;
+      margin-bottom: 50px;
+      color: #eee;
+    }
+
+    .impact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 20px;
+      border-radius: 16px;
+      backdrop-filter: blur(5px);
+    }
+
+    .card .icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 32px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .card p {
+      margin: 6px 0 0;
+      font-size: 15px;
+      color: #0f0101;
+    }
+
+    .card small {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .cta {
+      margin-top: 60px;
+    }
+
+    .cta h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #e6007e;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #f5f5f5;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .rating {
+      background: #fff;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .star {
+      color: gold;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 30px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+      }
+    }
+       body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .join-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 8%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .join-section::before {
+      content: "";
+      position: absolute;
+      right: -130px;
+      top: 50px;
+      width: 500px;
+      height: 400px;
+      background: #fbdff2;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .join-content {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .join-image {
+      flex: 1;
+      position: relative;
+    }
+
+    .join-image img {
+      width: 100%;
+      border-radius: 6px;
+      border: 5px solid #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .join-image::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: -15px;
+      bottom: -15px;
+      border: 3px solid #e91e8f;
+      z-index: -1;
+    }
+
+    .join-text {
+      flex: 1;
+    }
+
+    .rating {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .rating i {
+      color: #ffb400;
+      margin-right: 4px;
+    }
+
+    .join-text h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 15px;
+      color: #000;
+    }
+
+    .join-text p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e91e8f;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #c21873;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .join-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .join-image::after {
+        display: none;
+      }
+    }
+    /* Footer Styling */
+footer {
+  background-color: #e83e8c;   /* Pink background */
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+footer p, 
+footer a {
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter Section */
+footer .newsletter {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+footer .newsletter input[type="email"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+  max-width: 80%;
+  margin-right: 10px;
+}
+
+footer .newsletter button {
+  background: #fff;
+  color: #e83e8c;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer .newsletter button:hover {
+  background: #f1f1f1;
+}
+
+/* Footer Bottom */
+footer .footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  footer .newsletter input[type="email"] {
+    margin-bottom: 10px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+  <div class="logo">
+    <img src="logo.png" alt="Udaan Logo">
+  </div>
+  <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Women</a>
+      <a href="#">Opportunities</a>
+    </nav>
+    <div class="actions">
+      <select>
+        <option>EN</option>
+        <option>HI</option>
+      </select>
+      <button class="btn-outline">Log in / Sign Up</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Empowering <span>Women,</span><br>Changing <span>Futures</span></h1>
+      <p>Discover countless opportunities and connect with top employers. Start your journey towards a fulfilling
+        career today. Connect with employers who value your unique talents and aspirations.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">See Opportunities →</button>
+        <button class="btn-secondary">Explore Our Stories</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="cards">
+        <div class="card">
+          <img src="u1.jpg" alt="profile">
+          <div class="card-content">
+            <h4>Anita Singh</h4>
+            <p>Want skilled cooks for catering business</p>
+          </div>
+          <span class="badge hiring">We are hiring</span>
+        </div>
+
+        <div class="card">
+          <img src="p2.jpg" alt="profile">
+          <div class="card-content">
+            <h4>Kajal Tiwari</h4>
+            <p>Working as a tutor and contributing in encouraging women</p>
+          </div>
+          <span class="badge success">Success Story</span>
+        </div>
+
+        <div class="card">
+          <img src="p3.jpg" alt="profile">
+          <div class="card-content">
+            <h4>Shilpa Kher</h4>
+            <p>Serving delicious food to people</p>
+          </div>
+          <span class="badge success">Success Story</span>
+        </div>
+
+        <span class="badge job">We are looking for job</span>
+      </div>
+
+      <div class="trust-box">
+        # Trusted by over <span>50K+ users</span>
+      </div>
+    </div>
+  </section>
+  <section class="what-we-do">
+    <p class="heading">Few words about</p>
+    <h2>WHAT WE DO</h2>
+    <ul>
+      <li>We empower widows to rebuild their lives with dignity, confidence, and independence. Through skill development
+        programs, employment opportunities, and community support, we help women turn challenges into new beginnings.
+      </li>
+      <li>Our initiatives focus on practical training, mentorship, and connecting women to sustainable income sources,
+        ensuring they not only earn a living but also regain their self-worth. We also create safe spaces where women
+        can heal emotionally, share their experiences, and draw strength from community support.</li>
+      <li>Alongside this, we provide financial literacy and digital skills training to prepare women for modern
+        opportunities, while collaborating with local businesses and organizations to open doors for internships,
+        apprenticeships, and long-term employment.</li>
+      <li>By celebrating women’s success stories and amplifying their voices, UDAAN not only transforms individual
+        journeys but also builds a collective movement of hope, resilience, and change.</li>
+    </ul>
+  </section>
+  <section class="section">
+    <h2>We believe every woman deserves the chance to <span>thrive.</span></h2>
+    <p>UDAAN is a platform where widows find hope, skills, and the support needed to start fresh.</p>
+
+    <div class="image-grid">
+      <!-- Left big image -->
+      <img src="cu1.jpg" alt="Woman working">
+
+      <!-- Right column with two stacked images -->
+      <div class="right-column">
+        <img src="cu2.jpg" alt="Woman on computer">
+        <img src="c3.jpg" alt="Woman in workshop">
+      </div>
+    </div>
+  </section>
+  <section class="impact-section">
+    <h2>Our Impact In Number</h2>
+    <p>A huge opportunity to change your life and career.</p>
+
+    <div class="impact-cards">
+      <div class="card">
+        <div class="icon">👩‍🎓</div>
+        <h3>500+</h3>
+        <p>Women Trained</p>
+        <small>Successfully completed our comprehensive training programs and secured employment</small>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>40%</h3>
+        <p>Avg. Income Increased</p>
+        <small>Successfully completed our comprehensive training programs and secured employment</small>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>20+</h3>
+        <p>Community Partners</p>
+        <small>Successfully completed our comprehensive training programs and secured employment</small>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h3>Ready to be part of our success story?</h3>
+      <p>Join thousands of women who have transformed their lives through our programs.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary">Start your journey today</button>
+        <button class="btn-outline">Learn more about programs</button>
+        <div class="rating">⭐ 5.0 Ratings</div>
+      </div>
+    </div>
+  </section>
+  <section class="join-section">
+    <div class="join-content">
+      <!-- Left Image -->
+      <div class="join-image">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Women Together">
+      </div>
+
+      <!-- Right Text -->
+      <div class="join-text">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          &nbsp; 5.0 Ratings
+        </div>
+        <h2>Join Us Now</h2>
+        <p>
+          Take the first step towards transforming your life. 
+          Join thousands of women who have already embarked on their journey 
+          to financial independence and personal growth.
+        </p>
+        <a href="#" class="btn">Register now</a>
+      </div>
+    </div>
+  </section>
+<footer>
+  <div class="newsletter">
+    <h4>GET MONTHLY UPDATES</h4>
+    <p>Stay informed about new opportunities, success stories and upcoming training programs.</p>
+    <input type="email" placeholder="Enter your email address">
+    <button>Submit</button>
+  </div>
+
+  <div class="footer-container">
+    <div>
+      <img src="logo.png" alt="Udaan Logo" style="width:120px;">
+      <p>Empowering widows with skills, opportunities, and dignity — because every woman deserves the chance to thrive.</p>
+      <p><b>Email:</b> udaan.ac.org</p>
+      <p><b>Phone:</b> +91 7124545020</p>
+    </div>
+
+    <div>
+      <h4>QUICK LINKS</h4>
+      <a href="#">Home</a><br>
+      <a href="#">About Us</a><br>
+      <a href="#">Women</a><br>
+      <a href="#">Opportunities</a>
+    </div>
+
+    <div>
+      <h4>SUPPORT</h4>
+      <a href="#">Help Center</a><br>
+      <a href="#">Community Guidelines</a><br>
+      <a href="#">Terms of Services</a><br>
+      <a href="#">Career Support</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    COPYRIGHT @ 2025 UDAAN | 
+    <a href="#">Terms and conditions</a> | 
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+</body>
+
+</html>

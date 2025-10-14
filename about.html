@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udaan - Our Story</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e91e63;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: #e91e63;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid #e91e63;
+      transition: 0.3s;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #e91e63;
+    }
+
+    .btn-outline:hover {
+      background: #e91e63;
+      color: #fff;
+    }
+
+    .btn-fill {
+      background: #e91e63;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-fill:hover {
+      background: #c2185b;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url("https://images.unsplash.com/photo-1587560699334-cc4ff68b7a3c") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #e91e63;
+      font-weight: bold;
+    }
+
+    /* Curved bottom */
+    .curve {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .curve svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🕊 Udaan</div>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Opportunities</a></li>
+    </ul>
+    <div class="buttons">
+      <button class="btn btn-outline">EN ▼</button>
+      <button class="btn btn-fill">Log in / Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Story of Empowerment</h1>
+      <p><span class="highlight">UDAAN</span> is more than an initiative — it is a movement that uplifts widows by
+        turning hardships into opportunities for growth, dignity, and independence.</p>
+    </div>
+
+    <!-- Curved bottom -->
+    <div class="curve">
+      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#fff" d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z"></path>
+      </svg>
+    </div>
+  </section>
+</body>
+
+</html>

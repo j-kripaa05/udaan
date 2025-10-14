@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.story-container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0px 0px 16.4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 96px;
+  position: relative;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.back-arrow {
+  width: 45px;
+  height: 20px;
+}
+
+.back-text {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.main-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  background: linear-gradient(90deg, #E0218A 0%, #C725A2 58.17%, #852FE3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 96px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 30px;
+  border: 2px solid #E0218A;
+  border-radius: 8px;
+  background: transparent;
+  color: #E0218A;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #E0218A;
+  color: white;
+}
+
+.nav-icon {
+  width: 8px;
+  height: 13px;
+}
+
+.story-indicators {
+  display: flex;
+  gap: 22px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E5E5E5;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: #E0218A;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 539px;
+  margin: 0 96px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.profile-info {
+  color: white;
+}
+
+.profile-name {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.profile-role {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 500;
+  color: #EBEBEB;
+  margin-bottom: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px 2px 0;
+}
+
+.location-icon {
+  width: 8px;
+  height: 10px;
+}
+
+.location span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #EBEBEB;
+}
+
+.achievement-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.achievement-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.achievement-text {
+  font-size: 30px;
+  line-height: 45px;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px 96px;
+  align-items: flex-start;
+}
+
+.story-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.story-card {
+  background: #F9F9F9;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+
+.story-icon {
+  width: 34px;
+  height: 32px;
+  border-radius: 23px;
+}
+
+.story-header h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.story-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 403px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.impact-card,
+.details-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.impact-stat {
+  background: #FBE6F2;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.impact-stat.income-stat {
+  background: #DAE9FD;
+}
+
+.stat-number {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 600;
+  color: #DA2777;
+  margin-bottom: 6px;
+}
+
+.income-stat .stat-number {
+  color: #2563EA;
+}
+
+.stat-label {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  color: #6B7280;
+}
+
+.detail-item {
+  margin-bottom: 20px;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 3px;
+}
+
+.detail-icon {
+  width: 13px;
+  height: 12px;
+}
+
+.detail-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.detail-value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+  margin-left: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .story-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .header {
+    padding: 0 20px;
+  }
+  
+  .navigation {
+    padding: 40px 20px;
+  }
+  
+  .hero-section {
+    margin: 0 20px;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .achievement-cards {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navigation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .main-title {
+    position: static;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 400px;
+  }
+  
+  .story-card,
+  .impact-card,
+  .details-card {
+    padding: 20px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+  }
+  
+  .profile-role {
+    font-size: 18px;
+  }
+  
+  .achievement-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

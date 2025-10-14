@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+  color: #333;
+}
+
+.login-container {
+  position: relative;
+  max-width: 500px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+  padding: 40px;
+  text-align: center;
+  z-index: 2;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: #e4379a;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* .radio-group styles removed:
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.radio-group input {
+  accent-color: #e4379a;
+  margin-right: 6px;
+}
+*/
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.link-group {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.link {
+  font-size: 0.85rem;
+  color: #e4379a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #f04db4, #b43cc5);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.account-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.account-link a {
+  color: #e4379a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.account-link a:hover {
+  text-decoration: underline;
+}
+
+.background-circles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(244, 95, 181, 0.25);
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 250px;
+  height: 250px;
+  bottom: -50px;
+  right: -80px;
+}
+
+.circle3 {
+  width: 100px;
+  height: 100px;
+  bottom: 100px;
+  right: 200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px 20px;
+    margin: 30px 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  /* .radio-group styles removed from media query */
+
+  .btn {
+    font-size: 0.95rem;
+  }
+
+  .link-group {
+    text-align: center;
+  }
+
+  .account-link {
+    font-size: 0.85rem;
+  }
+}

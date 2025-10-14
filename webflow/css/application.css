@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #444444;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.application-form {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #444444;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.form-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#section-1 .section-image,
+#section-2 .section-image,
+#section-3 .section-image,
+#section-4 .section-image {
+  aspect-ratio: 1440 / 1269;
+}
+
+#section-5 .section-image {
+  aspect-ratio: 1440 / 2210;
+}
+
+/* Responsive Design */
+@media (max-width: 1480px) {
+  .application-form {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .application-form {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .form-section {
+    border-radius: 6px;
+  }
+  
+  .section-image {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+  
+  .application-form {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .form-section {
+    border-radius: 4px;
+  }
+  
+  .section-image {
+    border-radius: 4px;
+  }
+}
+
+/* Loading animation */
+.section-image {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.form-section:nth-child(1) .section-image {
+  animation-delay: 0.1s;
+}
+
+.form-section:nth-child(2) .section-image {
+  animation-delay: 0.2s;
+}
+
+.form-section:nth-child(3) .section-image {
+  animation-delay: 0.3s;
+}
+
+.form-section:nth-child(4) .section-image {
+  animation-delay: 0.4s;
+}
+
+.form-section:nth-child(5) .section-image {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.form-section:focus-within {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+}

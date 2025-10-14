@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+  color: #333;
+}
+
+.signup-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+  padding: 50px 60px;
+  text-align: center;
+  z-index: 2;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: #e4379a;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.radio-group input {
+  accent-color: #e4379a;
+  margin-right: 6px;
+}
+
+/* Forms */
+.form {
+  display: none;
+  text-align: left;
+  transition: opacity 0.4s ease;
+}
+
+.form.active {
+  display: block;
+  opacity: 1;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px 25px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.full-width {
+  grid-column: span 3;
+}
+
+.upload-section {
+  margin-top: 25px;
+}
+
+.upload-section p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.upload-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.upload-box {
+  flex: 1;
+  border: 1.5px dashed #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.upload-box small {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.upload-box input {
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 35px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #f04db4, #b43cc5);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+/* Background circles */
+.background-circles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(244, 95, 181, 0.25);
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 250px;
+  height: 250px;
+  bottom: -50px;
+  right: -80px;
+}
+
+.circle3 {
+  width: 100px;
+  height: 100px;
+  bottom: 100px;
+  right: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 30px 25px;
+  }
+  .full-width {
+    grid-column: span 1;
+  }
+  .upload-grid {
+    flex-direction: column;
+  }
+  .btn {
+    font-size: 0.95rem;
+  }
+}
